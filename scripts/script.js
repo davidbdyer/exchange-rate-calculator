@@ -16,7 +16,7 @@ async function calculate() {
 
 	// Change dom text to results
 	rateEl.textContent = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
-	amountElTwo.value = (amountElOne.value * (rate)).toFixed(2);
+	amountElTwo.value = (amountElOne.value * rate).toFixed(2);
 }
 
 // Event Listener
@@ -31,6 +31,5 @@ swap.addEventListener('click', () => {
 	currencyElTwo.value = temp;
 	calculate();
 });
-
 
 calculate();

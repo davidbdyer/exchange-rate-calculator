@@ -38,21 +38,31 @@
     "> 0.5% or last 2 versions and not dead"
   ],
   "eslintConfig": {
-		"env": {
-			"browser": true,
-			"commonjs": true,
-			"es2021": true
-		},
-		"extends": [
-			"eslint:recommended"
-		],
-		"overrides": [],
-		"parserOptions": {
-			"ecmaVersion": "latest"
-		},
-		"rules": {
-			"semi": ["error", "always"],
-		"quotes": ["error", "single"]
-		}
-	}
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "rules": {
+      "semi": ["error", "always"],
+      "quotes": ["error", "single"]
+    }
+  },
+  "prettier": {
+    "proseWrap": "preserve",
+    "bracketSameLine": true,
+    "singleQuote": true,
+    "endOfLine": "lf",
+    "printWidth": 200,
+    "order": "smacss",
+    "tabWidth": 2,
+    "useTabs": true
+  }
 }

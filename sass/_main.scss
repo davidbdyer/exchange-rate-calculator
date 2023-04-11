@@ -10,7 +10,7 @@ p {
 }
 
 .btn {
-	padding: .3125rem .75rem;
+	padding: 0.3125rem 0.75rem;
 	border: 0;
 	border-radius: var(--border-rad);
 	background-color: var(--primary-clr);
@@ -36,13 +36,13 @@ p {
 
 	select {
 		appearance: none;
-		padding: .625em 1.25em .625em .625em;
-		border: .05em solid var(--accent-clr);
+		padding: 0.625em 1.25em 0.625em 0.625em;
+		border: 0.05em solid var(--accent-clr);
 		border-radius: var(--border-rad);
 		background: transparent;
 		background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-		background-position: right .4em top 50%, 0, 0;
-		background-size: .75em auto, 100%;
+		background-position: right 0.4em top 50%, 0, 0;
+		background-size: 0.75em auto, 100%;
 		background-repeat: no-repeat;
 		color: var(--primary-txt-clr);
 		font-size: 1em;
@@ -63,7 +63,7 @@ p {
 			margin: 0;
 		}
 
-		&[type=number] {
+		&[type='number'] {
 			appearance: textfield;
 		}
 	}
@@ -78,7 +78,7 @@ p {
 .swap-ctrl-container {
 	display: grid;
 	place-items: center;
-	gap: .75em;
+	gap: 0.75em;
 	color: var(--primary-clr);
 }
 
