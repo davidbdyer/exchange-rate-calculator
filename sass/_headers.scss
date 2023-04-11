@@ -1,0 +1,39 @@
+@use 'sass-variables' as *;
+
+.primary-header {
+	display: grid;
+	place-items: center;
+	gap: .5em;
+	font-size: 4cqw;
+
+	@media (min-width: $media-tablet) {
+		grid-template-columns: 1fr 2fr;
+		font-size: 4cqw;
+
+		:first-child {
+			justify-self: start;
+		}
+		:last-child {
+			justify-self: end;
+		}
+	}
+
+	.money-img {
+		aspect-ratio: 1/1;
+		width: 75cqw;
+		color: var(--primary-clr);
+
+		@media (min-width: $media-tablet) {
+			width: 33cqw;
+		}
+	}
+
+	.primary-heading {
+		color: var(--primary-clr);
+		text-align: center;
+
+		@media (min-width: $media-tablet) {
+			text-align: right;
+		}
+	}
+}

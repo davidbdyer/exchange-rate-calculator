@@ -1,0 +1,58 @@
+{
+  "name": "exchange-rate",
+  "version": "1.0.0",
+  "description": "exchange rate",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm-run-all --parallel serve watch:* update-script-scr-remove-min",
+    "sort-declarations": "postcss ./sass/*.scss --replace",
+    "serve": "browser-sync start --server ./ --files *.html ./css ./scripts --no-ghost-mode",
+    "watch:sass": "sass --watch sass:css",
+    "watch:autoprefix": "onchange './css/style.css' -- npm run autoprefix",
+    "autoprefix": "postcss --use autoprefixer --replace ./css/style.css",
+    "minify-all": "npm-run-all --parallel minify:* remove-map update-script-scr-add-min",
+    "minify:css": "postcss --use cssnano --no-map --replace  ./css/style.css",
+    "minify:js": "terser ./scripts/script.js --output ./scripts/script-min.js --compress",
+    "update-script-scr-add-min": "node ./utilities/update-script-scr-add-min.mjs",
+    "update-script-scr-remove-min": "node ./utilities/update-script-scr-remove-min.mjs",
+    "eslint": "eslint --fix ./scripts/*",
+    "watch:eslint": "onchange ./scripts/* -- npm run eslint",
+    "remove-map": "rm ./css/style.css.map"
+  },
+  "keywords": [],
+  "author": "davidbdyer",
+  "license": "ISC",
+  "postcss": {
+    "syntax": "/usr/local/lib/node_modules/postcss-scss",
+    "map": false,
+    "plugins": {
+      "/usr/local/lib/node_modules/css-declaration-sorter": {
+        "order": "smacss"
+      }
+    }
+  },
+  "cssnano": {
+    "preset": "advanced"
+  },
+  "browserslist": [
+    "> 0.5% or last 2 versions and not dead"
+  ],
+  "eslintConfig": {
+		"env": {
+			"browser": true,
+			"commonjs": true,
+			"es2021": true
+		},
+		"extends": [
+			"eslint:recommended"
+		],
+		"overrides": [],
+		"parserOptions": {
+			"ecmaVersion": "latest"
+		},
+		"rules": {
+			"semi": ["error", "always"],
+		"quotes": ["error", "single"]
+		}
+	}
+}
