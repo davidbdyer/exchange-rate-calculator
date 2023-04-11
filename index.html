@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#005f455" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#005f45" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)">
 
 	<title>Exchange Rate Calculator</title>
 
@@ -79,7 +80,7 @@
 					<option value="VND">VND</option>
 					<option value="ZAR">ZAR</option>
 				</select>
-				<input type="number" id="amount-one" placeholder="0" value="1" />
+				<input aria-label="currency input one" type="number" id="amount-one" placeholder="0" value="1" />
 			</div> <!-- end currency -->
 
 			<div class="swap-rate-container">
@@ -152,7 +153,7 @@
 					<option value="VND">VND</option>
 					<option value="ZAR">ZAR</option>
 				</select>
-				<input type="number" id="amount-two" placeholder="0" />
+				<input aria-label="currency input two" type="number" id="amount-two" placeholder="0" />
 			</div> <!-- end currency -->
 		</main>
 	</div> <!-- end container -->

@@ -15,7 +15,7 @@ async function calculate() {
 	const rate = data.rates[currencyTwo] / data.rates[currencyOne];
 
 	// Change dom text to results
-	rateEl.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
+	rateEl.textContent = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
 	amountElTwo.value = (amountElOne.value * (rate)).toFixed(2);
 }
 
